@@ -48,7 +48,7 @@ app.get("/getControls",async(req,res)=>{
 })
 
 
-app.listen(process.env.PORT||4000,()=>{
+app.listen(process.env.PORT||3000,()=>{
     console.log("Server Running");
 
 })
