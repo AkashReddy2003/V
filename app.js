@@ -27,6 +27,7 @@ app.post("/sendControls",async(req,res)=>{
     const power=req.body.power;
 
     try{
+        await collection.remove();
         await collection.insertOne({ 
             lat:lat,
             lon:lon,
