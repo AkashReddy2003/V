@@ -24,6 +24,7 @@ app.post("/sendControls",async(req,res)=>{
     const lon=req.body.lon;
     const direc=req.body.direc;
     const angle=req.body.angle;
+    const power=req.body.power;
 
     try{
         await collection.insertOne({ 
@@ -31,6 +32,7 @@ app.post("/sendControls",async(req,res)=>{
             lon:lon,
             direc:direc,
             angle:angle,
+            power:power
 
      });
         res.send("Successfully Registerd");
