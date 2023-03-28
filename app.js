@@ -45,6 +45,12 @@ app.post("/sendControls",async(req,res)=>{
 })
 
 
+app.post("/stock",async(req,res)=>{
+    const a=req.body;
+    res.send(a);
+})
+
+
 app.get("/getControls",async(req,res)=>{
     const x=await collection.find().toArray();
     res.send(x);
